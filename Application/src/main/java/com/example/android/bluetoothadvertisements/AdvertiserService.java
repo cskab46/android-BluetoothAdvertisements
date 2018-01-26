@@ -191,7 +191,9 @@ public class AdvertiserService extends Service {
 
         AdvertiseData.Builder dataBuilder = new AdvertiseData.Builder();
         dataBuilder.addServiceUuid(Constants.Service_UUID);
-        dataBuilder.setIncludeDeviceName(true);
+//        dataBuilder.setIncludeDeviceName(true);
+        String mData = "12345678901234567890";
+        dataBuilder.addServiceData(Constants.Service_UUID, mData.getBytes());
 
         /* For example - this will cause advertising to fail (exceeds size limit) */
         //String failureData = "asdghkajsghalkxcjhfa;sghtalksjcfhalskfjhasldkjfhdskf";
@@ -206,7 +208,7 @@ public class AdvertiserService extends Service {
      */
     private AdvertiseSettings buildAdvertiseSettings() {
         AdvertiseSettings.Builder settingsBuilder = new AdvertiseSettings.Builder();
-        settingsBuilder.setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_LOW_POWER);
+        settingsBuilder.setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_BALANCED);
         settingsBuilder.setTimeout(0);
         return settingsBuilder.build();
     }

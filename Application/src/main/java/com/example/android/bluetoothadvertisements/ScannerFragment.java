@@ -192,7 +192,7 @@ public class ScannerFragment extends ListFragment {
      */
     private ScanSettings buildScanSettings() {
         ScanSettings.Builder builder = new ScanSettings.Builder();
-        builder.setScanMode(ScanSettings.SCAN_MODE_LOW_POWER);
+        builder.setScanMode(ScanSettings.SCAN_MODE_BALANCED);
         return builder.build();
     }
 

@@ -110,7 +110,7 @@ public class MainActivity extends FragmentActivity {
 
     private void setupFragments() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
+        //
         ScannerFragment scannerFragment = new ScannerFragment();
         // Fragments can't access system services directly, so pass it the BluetoothAdapter
         scannerFragment.setBluetoothAdapter(mBluetoothAdapter);
